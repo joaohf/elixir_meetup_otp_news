@@ -1,0 +1,197 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\input{revision}
+
+\title{OTP News}
+\subtitle{Since last meetup}
+\author[joaohf]{João Henrique Ferreira de Freitas \\ \texttt{https://github.com/joaohf} \\ \texttt{joaof@gmail.com}}
+\date[EMC May 2018]{Elixir Meetup, Campinas May 2018}
+
+\logo{\Revision}
+
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Table of Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\begin{document}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \section[Section]{Community}
+  
+  \begin{frame}
+    \frametitle{Community}
+    \begin{itemize}
+      \item \href{https://www.youtube.com/channel/UC47eUBNO8KBH_V8AfowOWOw}{Youtube: Code BEAM}
+      \item \href{https://www.youtube.com/channel/UCKrD_GYN3iDpG_uMmADPzJQ}{Youtube: Erlang Solutions}      
+      \item Slack channels: Elixir and Erlang
+      \item Elixir Forum
+      \item Erlang Questions ML
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{OpenErlang}
+    \framesubtitle{Celebrating 20 years of open-sourced Erlang!}
+
+    \begin{block}{}
+    Since Erlang OTP was open sourced in 1998.
+    \begin{figure}[t]
+    \includegraphics[scale=0.1]{img/20.png}
+    \centering
+    \end{figure}
+    \end{block}
+    
+    \pause
+    
+    \begin{alertblock}{}   
+    \href{https://www.youtube.com/watch?v=j6wbuV8pMx8}{Miriam Pena - Keynote: Unsung Heroes of the BEAM - Code BEAM SF 2018}
+    \end{alertblock}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{OTP 21 Highlights}
+
+    \begin{block}{}
+      \begin{itemize}
+        \item \href{http://blog.erlang.org/My-OTP-21-Highlights}{Erlang blog: My-OTP-21-Highlights}
+        \item \href{https://github.com/erlang/otp/releases/tag/OTP-21.0-rc1}{Erlang 21 RC-1 relase notes}
+        \item \href{https://www.youtube.com/watch?v=hHhm0bfdj-4}{Raimo Niskanen - Update OTP Team - Code BEAM SF 2018}   
+      \end{itemize}
+    \end{block}
+     
+    \pause
+    
+    \begin{itemize}[<+->]
+    \item Compiler and Interpreter
+      \begin{itemize}
+      \item Code such as f({ok, Val}) -> {ok, Val} is now automatically rewritten to f({ok, Val} = Tuple) -> Tuple
+      \item 20\% code size reduced
+      \item 5\% performance increased
+      \end{itemize}    
+
+    \item ERTS
+      \begin{itemize}
+      \item file handling port to nifs
+      \item I/O Polling: rewriter to use modern OS kernel polling features
+      \end{itemize}
+
+    \item Distribution: use your own carrier
+    \item Logger: new logging framework (inpired by lager, Elixir Logger, Python logger)
+    \item Stacktrace
+    \end{itemize}
+    
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Elixir 1.6.x}
+    
+    \begin{block}{}
+      \begin{itemize}
+      \item \href{https://elixir-lang.org/blog/2018/01/17/elixir-v1-6-0-released}{Elixir v1.6.0 Released}
+      \item \href{https://github.com/elixir-lang/elixir/releases/tag/v1.6.0}{Relase Notes - 1.6.0}
+      \end{itemize}
+    \end{block}
+
+    \pause
+    
+    \begin{itemize}[<+->]
+      \item Code formatter
+      \begin{itemize}
+        \item \href{https://www.youtube.com/watch?v=x2ckfhqB9nA}{Introducing HDD: Hughes Driven Development - José Valim - Elixir Conf EU 2018}
+        \item "The Design of a Pretty-Printing Library"
+      \end{itemize}
+      \item DynamicSupervisor, encapsulates simple\_one\_for\_one strategy and APIs in a proper module
+      \item New function attributes: @deprecated and @since
+      \item defguard and defguardp    
+    \end{itemize}
+
+  \end{frame}  
+
+  \begin{frame}
+    \frametitle{My Highlights}
+    \framesubtitle{Docker}
+    
+    \begin{block}{}
+        Docker Erlang Oficial: \href{https://github.com/erlang/docker-erlang}{Docker Erlang (deprecated)} to \href{https://github.com/erlang/docker-erlang-otp}{Docker Erlang OTP}
+    \end{block}
+    
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{My Highlights}
+    \framesubtitle{Riak Core}
+
+    \begin{block}{What is?}   
+    \begin{quote}
+    Riak Core is the distributed systems framework that forms the basis of how Riak distributes data and scales. More generally, it can be thought of as a toolkit for building distributed, scalable, fault-tolerant applications.        
+    \end{quote}
+    \end{block}
+    
+    \pause
+    
+    \begin{block}{}
+    \begin{itemize}
+      \item \href{https://github.com/basho/riak_core}{Basho Riak Core}
+      \item \href{http://marianoguerra.org/posts/riak-core-tutorial-part-1-setup.html}{Riak Core Tutorial Part 1: Setup}
+      \item \href{https://www.youtube.com/watch?v=1qyjAU81Qhg}{Sometimes the parts are greater than their sum}
+    \end{itemize}
+
+    \end{block}
+    
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Past Conferences}
+    
+    \begin{itemize}
+      \item \href{https://codesync.global/conferences/code-beam-sf-2018}{Code BEAM SF}
+      \begin{itemize}
+      \item \href{https://www.erlang-solutions.com/blog/elixirconf-eu-2018-highlights.html}{Check the highlights here}
+      \end{itemize}
+      \item \href{https://codesync.global/conferences/code-beam-lite-milan-2018}{Code BEAM Lite Milan}
+      \item \href{https://www.erlang-solutions.com/blog/elixirconf-eu-2018-highlights.html}{ElixirConf EU 2018}
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{Future Conferences}
+
+    \begin{itemize}
+      \item \href{https://codesync.global/conferences/code-elixir-2018}{Code Elixir 16 August 2018}
+      \item \href{https://codesync.global/conferences/code-beam-sto-2018}{Code BEAM STO 31 May 2018}
+      \item \href{https://codesync.global/conferences/code-mesh-2018}{Code Mesh 08 November}    
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \begin{center}
+    \Huge Thank You!
+    \end{center}
+  \end{frame}
+    
+  \begin{frame}
+    \frametitle{Colophon}
+    
+    \begin{itemize}
+    \item Latex
+    \item Beamer
+    \item Texmaker
+    \end{itemize}
+    
+  \end{frame}
+  
+  
+  
+% etc
+\end{document}
